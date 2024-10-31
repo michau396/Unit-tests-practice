@@ -1,12 +1,13 @@
-# -*- coding: utf-8 -*-
+# Zadanie 3
 from datetime import datetime
 
-students = [
-    [1, 'Jan', 'Kowalski', []],
-    [2, 'Anna', 'Nowak', []],
-    [3, 'Piotr', 'Zieliński', []],
-    [4, 'Maria', 'Wójcik', []]
-]
+if __name__ == "__main__":
+    students = [
+        [1, 'Jan', 'Kowalski', []],
+        [2, 'Anna', 'Nowak', []],
+        [3, 'Piotr', 'Zieliński', []],
+        [4, 'Maria', 'Wójcik', []]
+    ]
 
 def mark_attendance(students, student_id, attendance, date_str=None):
 

@@ -1,5 +1,9 @@
 import csv
 
+if __name__ == "__main__":
+    file_name = 'students_list.csv'
+    students = import_students(file_name)
+
 def import_students(file_name):
     students = []
     try:
@@ -20,4 +24,27 @@ def export_attendance(students, file_name):
             writer.writerow(student)
     print("The list has been saved")
 
+def add_student_to_list(students):
+    _student_id = input("Enter student ID: ")
+    _name = input("Enter student name: ")
+    _surname = input("Enter student surname: ")
+    _status = input("Is student present? (Y/N): ")
+    print("Student", _surname, _name, _student_id, "has been added")
 
+def addingStudents():
+    while True:
+        action = input("Do you want to add a student to the existing list? (Y/N): ")
+        if action.lower() == 'y':
+            add_student_to_list(students)
+        elif action.lower() == 'n':
+            print("Exiting program. ")
+            break
+        else:
+            print("Invalid input, please enter 'Y' or 'N'. ")
+        export_attendance(students, file_name)
+
+if __name__ == "__main__":
+    addingStudents()
+    print(students)
+    export_attendance(students, file_name)
+    print(students)
